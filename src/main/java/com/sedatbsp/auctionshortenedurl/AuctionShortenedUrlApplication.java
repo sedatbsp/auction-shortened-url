@@ -13,11 +13,4 @@ public class AuctionShortenedUrlApplication {
 		SpringApplication.run(AuctionShortenedUrlApplication.class, args);
 	}
 
-
-	@Bean
-	public PasswordEncoder passwordEncoder(){
-		return new BCryptPasswordEncoder();
-	}
-
-
 }
