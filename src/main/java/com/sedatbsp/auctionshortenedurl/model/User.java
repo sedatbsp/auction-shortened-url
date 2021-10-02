@@ -32,6 +32,9 @@ public class User {
     @Column(name = "role",nullable = false)
     private Role role;
 
+    @Transient
+    private String token;
+
     @Column(name = "create_time",nullable = false)
     private LocalDateTime createTime;
 
