@@ -1,6 +1,8 @@
 package com.sedatbsp.auctionshortenedurl.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -10,7 +12,6 @@ import java.time.LocalDateTime;
  * @created 02.10.2021 - 1:48 AM
  * @project auction-shortened-url
  */
-@Data
 @Entity
 @Table(name = "users")
 public class User {
