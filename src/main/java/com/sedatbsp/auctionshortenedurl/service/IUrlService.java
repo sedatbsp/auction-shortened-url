@@ -21,5 +21,7 @@ public interface IUrlService {
 
     void deleteShortenedUrl(Url url);
 
+    void deleteShortenedUrl(String url);
+
     List<Url> findAllUrls();
 }

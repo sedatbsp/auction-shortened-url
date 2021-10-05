@@ -88,5 +88,11 @@ public class UrlController {
         return new ResponseEntity<>(urlService.findAllUrls(),HttpStatus.OK);
     }
 
+    @DeleteMapping("api/delete/{shortenedUrl}") // api/delete/{shortenedUrl}
+    public ResponseEntity<?> deleteUrl(@PathVariable String shortenedUrl){
+        urlService.deleteShortenedUrl(shortenedUrl);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
 }

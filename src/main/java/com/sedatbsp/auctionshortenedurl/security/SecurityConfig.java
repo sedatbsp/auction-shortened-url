@@ -52,9 +52,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS); // no session
 
         http.authorizeRequests()
+                .antMatchers("/api/getAllUrls").permitAll()
                 .antMatchers("/api/authentication/**").permitAll()
                 .antMatchers("/api/internal/**").hasRole(Role.SYSTEM_ADMIN.name())
-                .antMatchers("/api/generate").authenticated();
+                .antMatchers("/api/generate").authenticated()
+                .antMatchers("/api/delete/**").authenticated();
+
                 //.anyRequest().authenticated();
 
         // jwt filter

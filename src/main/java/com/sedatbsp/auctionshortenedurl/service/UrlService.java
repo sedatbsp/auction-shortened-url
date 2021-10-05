@@ -79,8 +79,17 @@ public class UrlService implements IUrlService{
     }
 
     @Override
+    public void deleteShortenedUrl(String url) {
+
+        Url deletedUrl = urlRepository.findByShortenedUrl(url);
+        urlRepository.delete(deletedUrl);
+    }
+
+    @Override
     public List<Url> findAllUrls(){
         return urlRepository.findAll();
     }
+
+
 
 }
