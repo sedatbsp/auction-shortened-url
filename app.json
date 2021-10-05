@@ -1,0 +1,8 @@
+{
+  "name": "auction-shortened-url",
+  "buildpacks": [
+    {
+      "url": "heroku/java"
+    }
+  ]
+}
