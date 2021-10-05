@@ -1,5 +1,12 @@
 # Auction Shortened URL Service
 
+**For example:**<br>
+- Original link : https://www.linkedin.com/in/sedatbaspinar/  <br>
+- Shortened url : https://shortenedurl-sedatbsp.herokuapp.com/6be3b63c
+
+All URLs can be checked at https://shortenedurl-sedatbsp.herokuapp.com/api/getAllUrls
+
+
 ### Prerequisites
 - [Java](https://dev.java/learn/)
 - [Spring Boot](https://spring.io/projects/spring-boot)
@@ -32,6 +39,12 @@ or
 
 
 ## API Endpoints
+
+Endpoints running at https://shortenedurl-sedatbsp.herokuapp.com
+
+<small>
+You can test endpoints using the Postman RESTful API testing tool.
+</small>
 
 ### Sign Up
 
@@ -80,9 +93,9 @@ Content-Type: application/json
     "url":"https://stackoverflow.com/jobs"
 }
 ````
-For example, **localhost:8080/0e502f9b** created. This URL will redirect to the original link. (expiration date 6 months)
+- For example, **localhost:8080/0e502f9b** created. This URL will redirect to the original link. (expiration date 6 months)
 <br>
-*Default expiration date can be set from the related method.*
+- *Default expiration date can be set from the related method.*
 
 **expiration date** --- *optional*
 ````
