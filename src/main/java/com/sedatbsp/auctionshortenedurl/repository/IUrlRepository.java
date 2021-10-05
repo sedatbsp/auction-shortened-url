@@ -12,6 +12,6 @@ import java.util.Optional;
  */
 public interface IUrlRepository extends JpaRepository<Url,Long> {
 
-    Optional<Url> findByShortenedUrl(String shortenedUrl);
+    Url findByShortenedUrl(String shortenedUrl);
 
 }

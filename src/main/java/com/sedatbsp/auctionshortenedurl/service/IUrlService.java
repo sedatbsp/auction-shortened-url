@@ -1,7 +1,9 @@
 package com.sedatbsp.auctionshortenedurl.service;
 
 import com.sedatbsp.auctionshortenedurl.model.Url;
+import com.sedatbsp.auctionshortenedurl.model.UrlDto;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -11,10 +13,13 @@ import java.util.Optional;
  */
 public interface IUrlService {
 
+    Url generateShortenedUrl(UrlDto urlDto);
+
     Url persistShortenedUrl(Url url);
 
-    Optional<Url> getEncodedUrl(String url);
+    Url getEncodedUrl(String url);
 
     void deleteShortenedUrl(Url url);
 
+    List<Url> findAllUrls();
 }

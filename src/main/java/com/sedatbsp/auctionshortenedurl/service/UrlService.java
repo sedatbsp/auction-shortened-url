@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
-import java.util.Optional;
+import java.util.List;
 
 /**
  * @author Sedat Başpınar
@@ -68,7 +68,7 @@ public class UrlService implements IUrlService{
     }
 
     @Override
-    public Optional<Url> getEncodedUrl(String url) {
+    public Url getEncodedUrl(String url) {
         return urlRepository.findByShortenedUrl(url);
     }
 
@@ -77,4 +77,10 @@ public class UrlService implements IUrlService{
         urlRepository.delete(url);
 
     }
+
+    @Override
+    public List<Url> findAllUrls(){
+        return urlRepository.findAll();
+    }
+
 }

@@ -54,7 +54,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/api/authentication/**").permitAll()
                 .antMatchers("/api/internal/**").hasRole(Role.SYSTEM_ADMIN.name())
-                .anyRequest().authenticated();
+                .antMatchers("/api/generate").authenticated();
+                //.anyRequest().authenticated();
 
         // jwt filter
         // internal > jwt > authentication
