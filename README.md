@@ -15,7 +15,7 @@ All URLs can be checked at https://shortenedurl-sedatbsp.herokuapp.com/api/getAl
 - [Lombok](https://projectlombok.org/setup/maven)
 
 ### Tools
-- IntelliJ IDEA or any preferred IDE with embedded Gradle
+- IntelliJ IDEA or any preferred IDE
 - Postman (or any RESTful API testing tool)
 
 ### Run the Application
@@ -93,9 +93,10 @@ Content-Type: application/json
     "url":"https://stackoverflow.com/jobs"
 }
 ````
-- For example, **localhost:8080/0e502f9b** created. This URL will redirect to the original link. (expiration date 6 months)
+- For example, **localhost:8080/0e502f9b** created. <br>This URL will redirect to the original link. (expiration date 6 months)
 <br>
-- *Default expiration date can be set from the related method.*
+  
+- Default expiration date can be set from the related method.
 
 **expiration date** --- *optional*
 ````
